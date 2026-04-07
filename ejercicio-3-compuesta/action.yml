@@ -11,12 +11,12 @@ runs:
   steps:
     - name: Paso 1 - Saludar
       shell: bash
-      run: echo " Iniciando proyecto: ${{ inputs.proyecto }}"
+      run: echo "Iniciando proyecto ${{ inputs.proyecto }}"
 
     - name: Paso 2 - Verificar entorno
       shell: bash
-      run: echo " Entorno verificado en $(date)"
+      run: echo "Entorno verificado"
 
     - name: Paso 3 - Finalizar
       shell: bash
-      run: echo " Accion compuesta terminada para ${{ inputs.proyecto }}" 
+      run: echo "Accion compuesta terminada"
