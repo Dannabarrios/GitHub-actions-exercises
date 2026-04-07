@@ -1,2 +1,4 @@
 FROM alpine:3.18
-ENTRYPOINT ["echo", "Hola desde un contenedor Docker!"] 
+RUN echo "Construyendo imagen Docker..."
+RUN apk add --no-cache curl
+CMD echo "Imagen lista! curl instalado correctamente"
