@@ -1,0 +1,15 @@
+name: Ejercicio 2 - Accion JavaScript
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  correr-js:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Usar accion JavaScript
+        uses: ./ejercicio-2-javascript
+        with:
+          nombre: 'GitHub Actions' 

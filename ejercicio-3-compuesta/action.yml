@@ -1,0 +1,22 @@
+name: 'Mi Accion Compuesta'
+description: 'Combina varios pasos en una sola accion reutilizable'
+
+inputs:
+  proyecto:
+    description: 'Nombre del proyecto'
+    required: true
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Paso 1 - Saludar
+      shell: bash
+      run: echo " Iniciando proyecto: ${{ inputs.proyecto }}"
+
+    - name: Paso 2 - Verificar entorno
+      shell: bash
+      run: echo " Entorno verificado en $(date)"
+
+    - name: Paso 3 - Finalizar
+      shell: bash
+      run: echo " Accion compuesta terminada para ${{ inputs.proyecto }}" 

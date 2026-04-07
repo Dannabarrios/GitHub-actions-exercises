@@ -1,0 +1,6 @@
+name: 'Mi Accion Docker'
+description: 'Accion que corre dentro de un contenedor Docker'
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile' 

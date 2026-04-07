@@ -1,0 +1,15 @@
+name: Ejercicio 3 - Accion Compuesta
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  correr-compuesta:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Usar accion compuesta
+        uses: ./ejercicio-3-compuesta
+        with:
+          proyecto: 'Mi Proyecto de Prueba' 
